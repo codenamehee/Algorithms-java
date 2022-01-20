@@ -8,21 +8,18 @@ public class Q10950 {
         Scanner sc = new Scanner(System.in);
 
         int t = sc.nextInt();
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        ArrayList<Integer> arrayList1 = new ArrayList<>();
+        int[] sumArr = new int[t];
 
-        for (int i=1; i<=t; i++) {
-            int a = Integer.parseInt(sc.next());
+        for (int i=0; i<t; i++) {
+            int a = sc.nextInt();
             int b = sc.nextInt();
-            arrayList.add(a);
-            arrayList1.add(b);
-        }
 
-        for (int j=0; j<arrayList.size(); j++) {
-            int sum = arrayList.get(j) + arrayList1.get(j);
-            System.out.println(sum);
+            sumArr[i] = a+b;
         }
+        sc.close();
 
-//        System.out.println(sum);
+        for(int i=0; i<t; i++) {
+            System.out.println(sumArr[i]);
+        }
     }
 }
