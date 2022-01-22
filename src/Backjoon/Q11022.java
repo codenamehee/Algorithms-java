@@ -12,12 +12,15 @@ public class Q11022 {
         StringTokenizer st;
 
         int t = Integer.parseInt(br.readLine());
+        int a;
+        int b;
+        int sum;
 
         for (int i=1; i<=t; i++) {
-            st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-            int sum = a + b;
+            st = new StringTokenizer(br.readLine(), " ");
+            a = Integer.parseInt(st.nextToken());
+            b = Integer.parseInt(st.nextToken());
+            sum = a + b;
 
             bw.write("Case #" + i + ": " + a + " + " + b + " = " + sum + "\n");
         }
