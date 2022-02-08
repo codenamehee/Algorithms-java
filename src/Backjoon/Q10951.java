@@ -26,6 +26,6 @@ public class Q10951 {
         }
         System.out.println(sum);
 
-//        br.close();
+        br.close();
     }
 }
