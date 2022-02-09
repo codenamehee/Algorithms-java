@@ -13,12 +13,14 @@ public class Q10818 {
         int N = Integer.parseInt(br.readLine());
 
         // 두번째 줄 잃어들여서 배열에 숫자 저장하기
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int[] arr = new int[N];
 
         for(int i=0; i<N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
+
+        br.close();
 
         int min = arr[0];
         int max = arr[0];
