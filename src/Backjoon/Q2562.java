@@ -14,6 +14,7 @@ public class Q2562 {
         for(int i=0; i<9; i++) {
             arr[i] = Integer.parseInt(br.readLine());
         }
+        br.close();
 
         int max = arr[0];
         int index = 0;
