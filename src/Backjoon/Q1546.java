@@ -22,7 +22,7 @@ public class Q1546 {
             arr[i] = Float.parseFloat(st.nextToken());
         }
 
-        // 과목 점수 중 최댓값 찾기
+        // 과목 점수 중 최댓값 찾기 => Array.sort로 대체 가능
         float M = arr[0];
         for (int i=1; i < arr.length; i++) {
             if (M < arr[i]) {
