@@ -3,7 +3,7 @@ package Inflearn.String;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Q01_04_reverse_words_mine_T2 {
+public class Q01_04_reverse_words_T2 {
     public ArrayList<String> solution(int n, String[] str){
         ArrayList<String> answer=new ArrayList<>();
         for(String x : str){
@@ -23,7 +23,7 @@ public class Q01_04_reverse_words_mine_T2 {
     }
 
     public static void main(String[] args){
-        Q01_04_reverse_words_mine_T2 T = new Q01_04_reverse_words_mine_T2();
+        Q01_04_reverse_words_T2 T = new Q01_04_reverse_words_T2();
         Scanner kb = new Scanner(System.in);
         int n=kb.nextInt();
         String[] str=new String[n];
