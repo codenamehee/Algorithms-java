@@ -3,6 +3,7 @@ package Backjoon_Study;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Silver5_Q8979 {
@@ -26,7 +27,15 @@ public class Silver5_Q8979 {
         }
 
         // 배열의 1열의 숫자가 높은 순서대로 정렬하고
+        for (int i=0; i < N; i++) {
+            for (int j=0; j<N-j; j++) {
+                if (countryResult[j][1] > countryResult[j+1][1]) {
+                    int tmp = countryResult[j][1];
+                    countryResult[j][1] = countryResult[j+1][1];
 
+                }
+            }
+        }
     }
 
 
