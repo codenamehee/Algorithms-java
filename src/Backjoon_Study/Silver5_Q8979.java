@@ -1,44 +1,45 @@
 package Backjoon_Study;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class Silver5_Q8979 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st, st1; // br의 값들을 한 줄의 문자열로 읽어 공백을 기준으로 쪼개기 위한 stringtokenizer의 선언
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());// br의 값들을 한 줄의 문자열로 읽어 공백을 기준으로 쪼개기 위한 stringtokenizer의 선언
 
-        st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        int[][] countryResult = new int[N][4];
-//        int country, gold, silver, bronze;
+        int[][] countryResult = new int[N+1][4];
+        int rank = 1;
 
-        for (int i=0; i<N; i++) {
-            st1 = new StringTokenizer(br.readLine());
-            countryResult[i][0] = Integer.parseInt(st1.nextToken());
-            countryResult[i][1] = Integer.parseInt(st1.nextToken());
-            countryResult[i][2] = Integer.parseInt(st1.nextToken());
-            countryResult[i][3] = Integer.parseInt(st1.nextToken());
+        for (int i=1; i<=N; i++) {
+            st = new StringTokenizer(br.readLine());
+            int index = Integer.parseInt(st.nextToken());
+            int g = Integer.parseInt(st.nextToken());
+            int s = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            countryResult[index][0] = g;
+            countryResult[index][1] = s;
+            countryResult[index][2] = b;
         }
 
-        // 배열의 1열의 숫자가 높은 순서대로 정렬하고
-        for (int i=0; i < N; i++) {
-            for (int j=0; j<N-j; j++) {
-                if (countryResult[j][1] > countryResult[j+1][1]) {
-                    int tmp = countryResult[j][1];
-                    countryResult[j][1] = countryResult[j+1][1];
-
-                }
+        for (int i=1; i<=N; i++) {
+            if (countryResult[i][0] > countryResult[K][0]) {
+                rank++;
+            } else if (countryResult[i][0] == countryResult[K][0] && countryResult[i][1] > countryResult[K][1]) {
+                rank++;
+            } else if (countryResult[i][0] == countryResult[K][0] && countryResult[i][1] == countryResult[K][1] && countryResult[i][2] > countryResult[K][2]) {
+                rank++;
             }
         }
+        bw.write(String.valueOf(rank));
+        bw.flush();
+        br.close();
+        bw.close();
     }
-
-
 }
 
 // 풀이
