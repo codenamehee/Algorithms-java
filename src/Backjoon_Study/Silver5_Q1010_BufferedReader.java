@@ -27,6 +27,8 @@ public class Silver5_Q1010_BufferedReader {
         System.out.println(sb);
     }
 
+    // 아래 메서드에 static을 붙이면 안붙였을 때보다 성능이 훨씬 향상된다.
+    // 메서드 호출시간이 짧아지기 때문이다 => static이 없는 메서드는 실행 시 호출되어야 할 메서드를 찾는 과정이 추가적으로 필요하다.
     static int combi(int m, int n) {
         if (arr[m][n] > 0) {
             return arr[m][n];

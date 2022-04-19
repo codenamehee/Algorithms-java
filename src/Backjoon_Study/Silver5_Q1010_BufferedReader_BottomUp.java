@@ -1,5 +1,6 @@
 package Backjoon_Study;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Silver5_Q1010_BufferedReader_BottomUp {
@@ -18,7 +19,9 @@ public class Silver5_Q1010_BufferedReader_BottomUp {
         for (int i=2; i<30; i++) {
             for (int j=1; j<30; j++) {
                 dp[i][j] = dp[i-1][j-1] + dp[i-1][j];
+//                System.out.print(dp[i][j]);
             }
+//            System.out.println();
         }
 
         int T = sc.nextInt();
