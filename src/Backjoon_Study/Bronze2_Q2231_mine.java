@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 public class Bronze2_Q2231_mine {
@@ -18,8 +17,6 @@ public class Bronze2_Q2231_mine {
         int share;
         int remainder = N;
         ArrayList<Integer> resultArr = new ArrayList<>();
-//        int[] resultArr = new int[N];
-//        int i = N;
 
         while(true) {
             int lengthOfN = String.valueOf(N).length();
@@ -33,7 +30,6 @@ public class Bronze2_Q2231_mine {
 
             if (needSum==sumOfNums) {
                 resultArr.add(Integer.valueOf(N));
-//                resultArr[N] = N;
             }
 
             N = N - 1;
@@ -45,13 +41,6 @@ public class Bronze2_Q2231_mine {
                 break;
             }
         }
-
-//        if (resultArr.length==0) {
-//            System.out.println(0);
-//        } else {
-//            Arrays.sort(resultArr);
-//            System.out.println(resultArr[0]);
-//        }
 
         if (resultArr.isEmpty()) {
             System.out.println(0);
