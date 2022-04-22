@@ -34,6 +34,7 @@ public class Q01_10_the_shortest_distance_between_chars_mine_with_T {
                 if (result[i] > distance) {
                     result[i] = distance;
                 }
+                // 강사님은 위의 if문 대신 result[i] = Math.min(result[i], p) 로 대체!! 알아두기
             }
         }
 
