@@ -9,21 +9,24 @@ public class Silver2_Q1541_googled {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int sum = Integer.MAX_VALUE;
+        int sum = Integer.MAX_VALUE; // 합계를 가장 큰 수로 초기화
         StringTokenizer st = new StringTokenizer(br.readLine(), "-");
 
         while (st.hasMoreTokens()) {
-            int temp = 0;
+            int temp = 0; // '-' 부호를 기준으로 쪼개진 문자열 내에 +로 묶인 숫자들이 있을 경우 이들의 합을 구하기 위한 변수
 
             StringTokenizer forAddition = new StringTokenizer(st.nextToken(), "+");
 
+            // while문을 통해 +로 묶인 수들의 합 구하기
             while (forAddition.hasMoreTokens()) {
                 temp = temp + Integer.parseInt(forAddition.nextToken());
             }
 
+            // sum 변수가 초기값이면 맨 첫번째 값을 그대로 양수 형태로 넣어주고
             if (sum == Integer.MAX_VALUE) {
                 sum = temp;
             } else {
+                // 초기 값이 아니라면 계속해서 temp를 빼준다.
                 sum = sum - temp;
             }
         }
